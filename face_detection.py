@@ -25,7 +25,7 @@ class FaceDetectionApp:
         self.camera_height = camera_height
         self.fps = fps
         self.running = True
-
+        config["scaler_crop"] = (0.25, 0.25, 0.5, 0.5) # Esto recorta al centro (x, y, ancho, alto)
         # Load Haar Cascade classifier for face detection
         cascade_path = 'haarcascade_frontalface_default.xml'
         self.face_cascade = cv2.CascadeClassifier(cascade_path)
